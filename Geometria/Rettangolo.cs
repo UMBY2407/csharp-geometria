@@ -22,13 +22,22 @@ namespace Geometria
 		public void calcolaArea()
 		{
 			int area = baseRettangolo * altezzaRettangolo;
-			Console.WriteLine("L'Area del rettangolo è: " + area + " cm");
+			Console.WriteLine("L'Area del rettangolo è: " + area + " cm²");
 		}
 
 		public void calcolaPerimetro()
 		{
 			int perimetro = (baseRettangolo + altezzaRettangolo) * 2;
 			Console.WriteLine("Il Perimetro del rettangolo è: " + perimetro + " cm");
+		}
+
+		public void stampaRisultato()
+		{
+			Console.WriteLine("-- RETTANGOLO --");
+			Console.WriteLine("base: " + baseRettangolo + " cm");
+			Console.WriteLine("altezza: " + altezzaRettangolo + " cm");
+			Console.WriteLine("Perimetro: " + (baseRettangolo + altezzaRettangolo) * 2 + " cm");
+			Console.WriteLine("Area: " + baseRettangolo * altezzaRettangolo + " cm²");
 		}
 	}
 }
