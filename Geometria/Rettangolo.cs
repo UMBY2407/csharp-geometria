@@ -19,25 +19,28 @@ namespace Geometria
 		}
 
 		//METODI
-		public void calcolaArea()
+		public int calcolaArea()
 		{
 			int area = baseRettangolo * altezzaRettangolo;
-			Console.WriteLine("L'Area del rettangolo è: " + area + " cm²");
+			return area;
 		}
 
-		public void calcolaPerimetro()
+		public int calcolaPerimetro()
 		{
 			int perimetro = (baseRettangolo + altezzaRettangolo) * 2;
-			Console.WriteLine("Il Perimetro del rettangolo è: " + perimetro + " cm");
+			return perimetro;
 		}
 
 		public void stampaRisultato()
 		{
+			int area = calcolaArea();
+			int perimetro = calcolaPerimetro();
+
 			Console.WriteLine("-- RETTANGOLO --");
 			Console.WriteLine("base: " + baseRettangolo + " cm");
 			Console.WriteLine("altezza: " + altezzaRettangolo + " cm");
-			Console.WriteLine("Perimetro: " + (baseRettangolo + altezzaRettangolo) * 2 + " cm");
-			Console.WriteLine("Area: " + baseRettangolo * altezzaRettangolo + " cm²");
+			Console.WriteLine("Perimetro: " + perimetro + " cm");
+			Console.WriteLine("Area: " + area + " cm²");
 		}
 	}
 }

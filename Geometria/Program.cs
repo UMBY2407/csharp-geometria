@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Geometria;
+﻿using Geometria;
 using System.Data;
 
 Console.WriteLine("Hello, Utente!");
@@ -11,9 +10,11 @@ int altezza = int.Parse(Console.ReadLine());
 
 Rettangolo primoRettangolo = new Rettangolo(altezza, Base);
 
-primoRettangolo.calcolaArea();
-primoRettangolo.calcolaPerimetro();
-Console.WriteLine("----------------------------");
+int area = primoRettangolo.calcolaArea();
+int perimetro = primoRettangolo.calcolaPerimetro();
+Console.WriteLine("Il perimetro del rettangolo è: " + perimetro + " cm");
+Console.WriteLine("L'Area del rettangolo è: " + area + " cm²");
+Console.WriteLine("------------------------------------------------------");
 
 Console.Write("Inserire la Base del 2° Rettangolo (accetto solo interi): ");
 int Base2 = int.Parse(Console.ReadLine());
